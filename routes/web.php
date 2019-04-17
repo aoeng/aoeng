@@ -19,3 +19,7 @@ Route::get('/', 'HomeController@index')->name('home');
 Route::get('/php', 'HomeController@index')->name('php');
 Route::get('/vue', 'HomeController@index')->name('vue');
 Route::get('/about', 'HomeController@index')->name('about');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

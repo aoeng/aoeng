@@ -19,41 +19,21 @@
     <link href="{{asset('css/demo.css')}}" rel="stylesheet" />
 </head>
 
-<body class="index-page sidebar-collapse">
+<body class="profile-page sidebar-collapse">
 <nav class="navbar navbar-transparent navbar-color-on-scroll fixed-top navbar-expand-lg" color-on-scroll="100" id="sectionsNav">
     <div class="container">
         <div class="navbar-translate">
-            <a class="navbar-brand" href="{{url('/')}}">
-                AOE NG </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <a class="navbar-brand" href="{{url('/')}}">AOENG </a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="navbar-nav ml-auto">
-                <li class="dropdown nav-item">
-                    <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                        <i class="material-icons">apps</i> 分类
+               {{-- <li class="nav-item">
+                    <a class="nav-link" href="{{route('login')}}">
+                        <i class="material-icons"></i> 登录
                     </a>
-                    <div class="dropdown-menu dropdown-with-icons">
-                        <a href="{{route('php')}}" class="dropdown-item">
-                            <i class="fa fa-php"></i>PHP
-                        </a>
-                        <a href="{{route('vue')}}" class="dropdown-item">
-                            <i class="fa fa-vue"></i> Vue
-                        </a>
-                    </div>
-                </li>
+                </li>--}}
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('about')}}">
-                        <i class="material-icons">account_circle</i> 站长简介
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/aoeng" target="_blank" data-original-title="Follow us on Github">
+                    <a class="nav-link" rel="tooltip" title="" data-placement="bottom" href="https://github.com/fevwind" target="_blank" data-original-title="Follow us on Github">
                         <i class="fa fa-github"></i>
                     </a>
                 </li>
@@ -62,67 +42,90 @@
         </div>
     </div>
 </nav>
-<div class="page-header header-filter clear-filter purple-filter" data-parallax="true" style="background-image: url({{asset('material-kit/img/bg2.jpg')}});">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 ml-auto mr-auto">
-                <div class="brand">
-                    <h1>AOE NG.</h1>
-                    <h3>My Show Time.</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<div class="page-header header-filter" data-parallax="true" style="background-image: url('{{asset('material-kit/img/city-profile.jpg')}}');"></div>
 <div class="main main-raised">
-
-    <div class="section section-download" id="downloadSection">
+    <div class="profile-content">
         <div class="container">
-            <div class="row text-center">
-                <div class="col-md-8 ml-auto mr-auto">
-                    <h2>Do you love this UI Kit?</h2>
-                    <h4>Cause if you do, it can be yours for FREE. Hit the buttons below to navigate to our website where you can find the kit. Our friends from
-                        <a href="https://themeisle.com/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank">ThemeIsle</a> created a Wordpress Theme which can be also downloaded for free. Start a new project or give an old Bootstrap project a new look!</h4>
-                </div>
-                <div class="col-sm-8 col-md-6 ml-auto mr-auto">
-                    <a href="https://www.creative-tim.com/product/material-kit" class="btn btn-primary btn-lg">
-                        <i class="fa fa-html5"></i> Free HTML Download
-                    </a>
-                    <a href="https://themeisle.com/themes/hestia/?utm_campaign=mkfree-hestia&amp;utm_source=creativetim&amp;utm_medium=website" target="_blank" class="btn btn-primary btn-lg">
-                        <i class="fa fa-wordpress"></i> Wordpress Theme
-                    </a>
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile">
+                        <div class="avatar">
+                            <img src="{{asset('material-kit/img/faces/avatar.jpg')}}" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                        </div>
+                        <div class="name">
+                            <h3 class="title">YongFeng Dang</h3>
+                            <h6>PHPer</h6>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <br>
-            <br>
-            <div class="row text-center">
-                <div class="col-md-8 ml-auto mr-auto">
-                    <h2>Want more?</h2>
-                    <h4>We've just launched
-                        <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" target="_blank">Material Kit PRO</a>. It has a huge number of components, sections and example pages. Start Your Development With A Badass Bootstrap UI Kit inspired by Material Design.</h4>
-                </div>
-                <div class="col-sm-8 col-md-5 ml-auto mr-auto">
-                    <a href="https://demos.creative-tim.com/material-kit-pro/presentation.html?ref=utp-mk-demos" class="btn btn-rose btn-upgrade btn-lg" target="_blank">
-                        <i class="material-icons">unarchive</i> Upgrade to PRO
-                    </a>
+            <div class="description text-center">
+                <p>这个人很懒,什么也没有留下!</p>
+            </div>
+            <div class="row">
+                <div class="col-md-6 ml-auto mr-auto">
+                    <div class="profile-tabs">
+                        <ul class="nav nav-pills nav-pills-icons justify-content-center" role="tablist">
+                            {{--<li class="nav-item">
+                                <a class="nav-link active" href="#studio" role="tab" data-toggle="tab">
+                                    <i class="material-icons">camera</i> Studio
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#works" role="tab" data-toggle="tab">
+                                    <i class="material-icons">palette</i> Work
+                                </a>
+                            </li>--}}
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                    <i class="material-icons">favorite</i> I
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                    <i class="material-icons">favorite</i> Love
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#favorite" role="tab" data-toggle="tab">
+                                    <i class="material-icons">favorite</i> You
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="sharing-area text-center">
-                <div class="row justify-content-center">
-                    <h3>Thank you for supporting us!</h3>
+            <div class="tab-content tab-space">
+                <div class="tab-pane active text-center gallery" id="studio">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+                           {{-- <img src="../assets/img/examples/studio-1.jpg" class="rounded">--}}
+                        </div>
+                        <div class="col-md-3 mr-auto">
+
+                        </div>
+                    </div>
                 </div>
-                <button id="twitter" class="btn btn-raised btn-twitter sharrre">
-                    <i class="fa fa-twitter"></i> Tweet
-                </button>
-                <button id="facebook" class="btn btn-raised btn-facebook sharrre">
-                    <i class="fa fa-facebook-square"></i> Share
-                </button>
-                <button id="googlePlus" class="btn btn-raised btn-google-plus sharrre">
-                    <i class="fa fa-google-plus"></i> Share
-                </button>
-                <a id="github" href="https://github.com/creativetimofficial/material-kit" target="_blank" class="btn btn-raised btn-github">
-                    <i class="fa fa-github"></i> Star
-                </a>
+                <div class="tab-pane text-center gallery" id="works">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+
+                        </div>
+                        <div class="col-md-3 mr-auto">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane text-center gallery" id="favorite">
+                    <div class="row">
+                        <div class="col-md-3 ml-auto">
+
+                        </div>
+                        <div class="col-md-3 mr-auto">
+
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -131,7 +134,7 @@
 <footer class="footer" data-background-color="black">
     <div class="container">
         <nav class="float-left">
-            <ul>
+         {{--   <ul>
                 <li>
                     <a href="https://www.creative-tim.com">
                         Creative Tim
@@ -152,14 +155,12 @@
                         Licenses
                     </a>
                 </li>
-            </ul>
+            </ul>--}}
         </nav>
         <div class="copyright float-right">
             &copy;
-            <script>
-                document.write(new Date().getFullYear())
-            </script>, made with <i class="material-icons">favorite</i> by
-            <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a> for a better web.
+            2019, made with <i class="material-icons">favorite</i> by
+            <a href="https://github.com/fevwind" target="_blank">Dang</a> .
         </div>
     </div>
 </footer>
